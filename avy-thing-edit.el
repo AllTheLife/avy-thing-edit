@@ -33,7 +33,7 @@
 (require 'thing-edit)
 
 (defcustom avy-thing-edit-jump-command
-  'evil-avy-goto-char-2
+  'avy-goto-char-2
   "avy jump command"
   :type 'function)
 
@@ -42,7 +42,7 @@
   "Cut sexp at current point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'sexp t)))
 
 ;;;###autoload
@@ -51,7 +51,7 @@
 With the universal argument, the text will also be killed."
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'sexp kill-conditional)))
 
 ;;;###autoload
@@ -59,7 +59,7 @@ With the universal argument, the text will also be killed."
   "Replace sexp at current point with the content of kill-ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'sexp)))
 
 ;;;###autoload
@@ -67,7 +67,7 @@ With the universal argument, the text will also be killed."
   "Cut email at current point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'email t)))
 
 ;;;###autoload
@@ -76,7 +76,7 @@ With the universal argument, the text will also be killed."
 With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'email kill-conditional)))
 
 ;;;###autoload
@@ -84,7 +84,7 @@ With the universal argument, the text will also be killed"
   "Replace email at current point with the content kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'email)))
 
 ;;;###autoload
@@ -92,7 +92,7 @@ With the universal argument, the text will also be killed"
   "Cut filename at current point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'filename t)))
 
 ;;;###autoload
@@ -101,7 +101,7 @@ With the universal argument, the text will also be killed"
 With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'filename kill-conditional)))
 
 ;;;###autoload
@@ -109,7 +109,7 @@ With the universal argument, the text will also be killed"
   "Replace filename at current point with kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'filename)))
 
 ;;;###autoload
@@ -117,7 +117,7 @@ With the universal argument, the text will also be killed"
   "Cut url at current point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'url t)))
 
 ;;;###autoload
@@ -126,7 +126,7 @@ With the universal argument, the text will also be killed"
 With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'url kill-conditional)))
 
 ;;;###autoload
@@ -134,7 +134,7 @@ With the universal argument, the text will also be killed"
   "Replace url at current point with kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'url)))
 
 ;;;###autoload
@@ -142,7 +142,7 @@ With the universal argument, the text will also be killed"
   "Cut words at point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'word t)))
 
 ;;;###autoload
@@ -151,7 +151,7 @@ With the universal argument, the text will also be killed"
 With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'word kill-conditional)))
 
 ;;;###autoload
@@ -159,7 +159,7 @@ With the universal argument, the text will also be killed"
   "Replace words at point with kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'word)))
 
 ;;;###autoload
@@ -167,7 +167,7 @@ With the universal argument, the text will also be killed"
   "Cut symbol around point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'symbol t)))
 
 ;;;###autoload
@@ -176,7 +176,7 @@ With the universal argument, the text will also be killed"
  With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'symbol kill-conditional)))
 
 ;;;###autoload
@@ -184,7 +184,7 @@ With the universal argument, the text will also be killed"
   "Replace symbol around point with kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'symbol)))
 
 ;;;###autoload
@@ -192,7 +192,7 @@ With the universal argument, the text will also be killed"
   "Cut current line into Kill-Ring without mark the line."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'line t)))
 
 ;;;###autoload
@@ -201,7 +201,7 @@ With the universal argument, the text will also be killed"
  With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'line kill-conditional)))
 
 ;;;###autoload
@@ -209,7 +209,7 @@ With the universal argument, the text will also be killed"
   "Replace current line with kill ring"
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'line)))
 
 ;;;###autoload
@@ -218,7 +218,7 @@ With the universal argument, the text will also be killed"
 With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'paragraph kill-conditional)))
 
 ;;;###autoload
@@ -226,7 +226,7 @@ With the universal argument, the text will also be killed"
   "Replace current paragraph around the point with the content of kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'paragraph)))
 
 ;;;###autoload
@@ -234,7 +234,7 @@ With the universal argument, the text will also be killed"
   "Cut current paragraph around the point"
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'paragraph t)))
 
 ;;;###autoload
@@ -242,7 +242,7 @@ With the universal argument, the text will also be killed"
   "Cut function around point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'defun t)))
 
 ;;;###autoload
@@ -251,7 +251,7 @@ With the universal argument, the text will also be killed"
  With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'defun kill-conditional)))
 
 ;;;###autoload
@@ -259,7 +259,7 @@ With the universal argument, the text will also be killed"
   "Replace function around point with the content of kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'defun)))
 
 ;;;###autoload
@@ -267,7 +267,7 @@ With the universal argument, the text will also be killed"
   "Cut list around point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'list t)))
 
 ;;;###autoload
@@ -276,7 +276,7 @@ With the universal argument, the text will also be killed"
  With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'list kill-conditional)))
 
 ;;;###autoload
@@ -284,7 +284,7 @@ With the universal argument, the text will also be killed"
   "Replace list around point with the content of kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'list)))
 
 ;;;###autoload
@@ -292,7 +292,7 @@ With the universal argument, the text will also be killed"
   "Cut sentence around point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'sentence t)))
 
 ;;;###autoload
@@ -301,7 +301,7 @@ With the universal argument, the text will also be killed"
  With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'sentence kill-conditional)))
 
 ;;;###autoload
@@ -309,7 +309,7 @@ With the universal argument, the text will also be killed"
   "Replace sentence around point with the content of currnt line."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'sentence)))
 
 ;;;###autoload
@@ -317,7 +317,7 @@ With the universal argument, the text will also be killed"
   "Cut whitespace around point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'whitespace t)))
 
 ;;;###autoload
@@ -326,7 +326,7 @@ With the universal argument, the text will also be killed"
  With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'whitespace kill-conditional)))
 
 ;;;###autoload
@@ -334,7 +334,7 @@ With the universal argument, the text will also be killed"
   "Replace whitespace around point with the content of currnt line."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'whitespace)))
 
 ;;;###autoload
@@ -342,7 +342,7 @@ With the universal argument, the text will also be killed"
   "Cut page around point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'page t)))
 
 ;;;###autoload
@@ -351,7 +351,7 @@ With the universal argument, the text will also be killed"
  With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit 'page kill-conditional)))
 
 ;;;###autoload
@@ -359,7 +359,7 @@ With the universal argument, the text will also be killed"
   "Replace page around point with the content of currnt line."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-replace 'page)))
 
 ;; Below function is not base on thingatpt, but it's effect like above function.
@@ -369,7 +369,7 @@ With the universal argument, the text will also be killed"
   "Cut content from current point to line end."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-copy-to-line-end t)))
 
 ;;;###autoload
@@ -379,7 +379,7 @@ If `KILL-CONDITIONAL' is non-nil, kill object,
 otherwise copy object."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit-internal (point)
                          (line-end-position)
                          kill-conditional)))
@@ -389,7 +389,7 @@ otherwise copy object."
   "Cut content from current point to line beginning."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-copy-to-line-beginning t)))
 
 ;;;###autoload
@@ -399,7 +399,7 @@ If `KILL-CONDITIONAL' is non-nil, kill object,
 otherwise copy object."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-edit-internal (line-beginning-position)
                          (point)
                          kill-conditional)))
@@ -410,7 +410,7 @@ otherwise copy object."
 If mark is active, it can cut all comment that in mark."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-copy-comment t)))
 
 ;;;###autoload
@@ -421,7 +421,7 @@ If `KILL-CONDITIONAL' is non-nil, kill object,
 otherwise copy object."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (let ((beg (line-beginning-position))
           (end (line-end-position)))
       (when mark-active
@@ -443,7 +443,7 @@ otherwise copy object."
   "Cut number at point."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-copy-number t)))
 
 ;;;###autoload
@@ -452,7 +452,7 @@ otherwise copy object."
 With the universal argument, the text will also be killed"
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (when (thing-at-point-looking-at "-?[0-9]+\\.?[0-9]*" 500)
       (thing-edit-internal
        (match-beginning 0)
@@ -464,7 +464,7 @@ With the universal argument, the text will also be killed"
   "Replace number at point with kill ring."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (when (thing-at-point-looking-at "-?[0-9]+\\.?[0-9]*" 500)
       (thing-replace-internal
        (match-beginning 0)
@@ -474,7 +474,7 @@ With the universal argument, the text will also be killed"
   "Cut content in match parentheses."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-copy-parentheses t)))
 
 (defun avy-thing-copy-parentheses (kill-conditional)
@@ -483,7 +483,7 @@ If `KILL-CONDITIONAL' is non-nil, kill object,
 otherwise copy object."
   (interactive "P")
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (if (thing-edit-in-string-p)
         (thing-edit-internal
          (1+ (car (thing-edit-string-start+end-points)))
@@ -504,7 +504,7 @@ otherwise copy object."
   "Replace content in match parentheses with the content of currnt line."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (if (thing-edit-in-string-p)
         (thing-replace-internal
          (1+ (car (thing-edit-string-start+end-points)))
@@ -525,7 +525,7 @@ If `KILL-CONDITIONAL' is non-nil, kill object,
 otherwise copy object."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (let* ((active (region-active-p))
            (pos (or (and active (region-beginning))
                     (line-beginning-position)))
@@ -537,14 +537,14 @@ otherwise copy object."
   "Cut content of the current region or line."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (thing-copy-region-or-line t)))
 
 (defun avy-thing-replace-region-or-line ()
   "Replace the current region or line with the content."
   (interactive)
   (save-excursion
-    (funcall-interactively avy-thing-edit-jump-command)
+    (call-interactively avy-thing-edit-jump-command)
     (let* ((active (region-active-p))
            (pos (or (and active (region-beginning))
                     (line-beginning-position)))
